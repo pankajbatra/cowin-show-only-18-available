@@ -1,3 +1,15 @@
 # cowin show only-18+ and available slots
 TamporMonkey Script to show only centres which are doing vaccination for 18+ and have slots available.
 It hides remaining slots to save user's time.
+
+
+It checks for the slot every 5 second and plays audio in case a slot is found
+
+Steps:
+1. Install tampermonkey for chrome (https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en). 
+2. Download and install the script (https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.18available.user.js)
+3. Reload Co-win site, select state and city of your choice and press search button.
+4. Now it will play audio whenever slot is found and keep searching every 5 seconds.
+
+Video recording:
+https://www.loom.com/share/e568883ad4554d5c97f06e34b379e880
