@@ -5,7 +5,7 @@ It hides remaining slots to save user's time.
 
 Insipred by @jacobSingh [work](https://github.com/jacobSingh/cowin-18plus-userscript)
 
-It checks for the slot every 5 second and plays audio in case a slot is found
+It checks for the slot every 3 second and plays audio in case a slot is found. It also checks if user is still logged in, if not, it redirects to login page and plays audio so that user can re-login and restart the process.
 
 Steps:
 1. Install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en) for chrome. 
