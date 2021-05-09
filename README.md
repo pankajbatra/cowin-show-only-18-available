@@ -17,7 +17,7 @@ Steps:
 3. Reload Co-win site, select state and city of your choice and press search button.
 4. Now it will play audio whenever slot is found and keep searching every 5 seconds.
 
-> **Note: Cowin site keeps logging out every 15 minutes, please go back to beneficirias page and relogin if required and follow step 3 above.**
+> **Note: Cowin site keeps logging out every 15 minutes, please go back to beneficiaries page and relogin if required and follow step 3 above.**
 
 [Video recording and instructions](https://www.loom.com/share/0a34939fd51e4b758f0e0a03f8b47ed9)
 
