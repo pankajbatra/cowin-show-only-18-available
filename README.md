@@ -20,3 +20,6 @@ Steps:
 [Video recording and instructions](https://www.loom.com/share/0a34939fd51e4b758f0e0a03f8b47ed9)
 
 https://www.loom.com/share/0a34939fd51e4b758f0e0a03f8b47ed9
+
+
+[How to check whether page is being refreshed every 5 seconds or not](https://www.loom.com/share/c46722780d7843f69a70994b734d9b44)
