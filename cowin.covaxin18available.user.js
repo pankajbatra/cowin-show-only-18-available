@@ -17,7 +17,6 @@ var $ = jQuery;
 (function() {
     'use strict';
     var mCoinSound = new Audio("https://soundbible.com/grab.php?id=2206&type=mp3");
-    var sound2 = new Audio('https://assets.mixkit.co/sfx/download/mixkit-bell-gentle-alarm-notification-940.wav');
 
     function onElementInserted(containerSelector, elementSelector, callback) {
 
@@ -50,7 +49,7 @@ var $ = jQuery;
 
     onElementInserted('body', 'form.login-block', function(element) {
         console.log("Not logged in: on login page");
-        sound2.play();
+        mCoinSound.play();
     });
 
     onElementInserted('body', '.beneficiary-box', function(element) {
@@ -62,7 +61,6 @@ var $ = jQuery;
     });
 
     onElementInserted('body', '.center-box', function(element) {
-        console.log("center Box");
         setInterval(function() {
             mCoinSound.pause();
             mCoinSound.currentTime = 0;
@@ -86,7 +84,7 @@ var $ = jQuery;
                 },
                 error: function (jqXhr, textStatus, errorMessage) { // error callback
                     console.log("logged out ..., sending to login page");
-                    sound2.play();
+                    mCoinSound.play();
                     window.location.href = "https://selfregistration.cowin.gov.in/";
                 }
             });
