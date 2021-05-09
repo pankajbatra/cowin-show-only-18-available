@@ -3,7 +3,7 @@
 TamporMonkey Script to show only centres which are doing vaccination as per your requirement and have the slots available.
 It hides remaining slots to save user's time.
 
-Insipred by [@jacobSingh work](https://github.com/jacobSingh/cowin-18plus-userscript)
+Insipred by @jacobSingh [work](https://github.com/jacobSingh/cowin-18plus-userscript)
 
 It checks for the slot every 5 second and plays audio in case a slot is found
 
