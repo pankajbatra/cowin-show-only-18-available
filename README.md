@@ -14,4 +14,4 @@ Steps:
 4. Now it will play audio whenever slot is found and keep searching every 5 seconds.
 
 Video recording:
-https://www.loom.com/share/e568883ad4554d5c97f06e34b379e880
+https://www.loom.com/share/0a34939fd51e4b758f0e0a03f8b47ed9
