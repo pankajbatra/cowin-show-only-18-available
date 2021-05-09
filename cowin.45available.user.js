@@ -5,15 +5,31 @@
 // @description  Only show 45+ and bookable records
 // @author       Pankaj Batra (github.com/pankajbatra)
 // @match        https://www.cowin.gov.in/*
+// @match https://selfregistration.cowin.gov.in
 // @match        https://selfregistration.cowin.gov.in/appointment
 // @require      https://code.jquery.com/jquery-3.6.0.min.js
 // @grant        none
 // ==/UserScript==
 
+
+'use strict';
+// Probably could remove this, but it makes the element mutation finder code easier.
+var $ = jQuery;
+
+$(document).ready(function() {
+    if (window.location.href == "https://selfregistration.cowin.gov.in/") {
+      console.log("Not logged in");
+      setTimeout(function() { $(".login-btn").click(); mCoinSound.play();}, 5000);
+      var mCoinSound = new Audio("https://soundbible.com/grab.php?id=2206&type=mp3");
+      mCoinSound.loop = true;
+      // mCoinSound.muted = true;
+    }
+  });
+
 (function() {
     'use strict';
     // Probably could remove this, but it makes the element mutation finder code easier.
-    var $ = jQuery;
+    //var $ = jQuery;
     var mCoinSound = new Audio("https://soundbible.com/grab.php?id=2206&type=mp3");
 
     function onElementInserted(containerSelector, elementSelector, callback) {
