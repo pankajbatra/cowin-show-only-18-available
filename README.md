@@ -9,9 +9,9 @@ It checks for the slot every 5 second and plays audio in case a slot is found
 Steps:
 1. Install tampermonkey for chrome (https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en). 
 2. Download and install the script 
-   For 18+ slots : https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.18available.user.js
-   For 18+ covaxin slots : https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.covaxin18available.user.js
-   For 45+ slots: https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.45available.user.js
+   1. For 18+ slots : https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.18available.user.js
+   2. For 18+ covaxin slots : https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.covaxin18available.user.js
+   3. For 45+ slots: https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.45available.user.js
 3. Reload Co-win site, select state and city of your choice and press search button.
 4. Now it will play audio whenever slot is found and keep searching every 5 seconds.
 
