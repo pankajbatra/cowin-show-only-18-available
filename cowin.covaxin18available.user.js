@@ -29,7 +29,7 @@ $(document).ready(function() {
     'use strict';
     // Probably could remove this, but it makes the element mutation finder code easier.
     //var $ = jQuery;
-    var mCoinSound = new Audio("http://soundbible.com/grab.php?id=2206&type=mp3");
+    var mCoinSound = new Audio("https://soundbible.com/grab.php?id=2206&type=mp3");
 
     function onElementInserted(containerSelector, elementSelector, callback) {
 
