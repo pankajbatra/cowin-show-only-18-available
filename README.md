@@ -13,6 +13,7 @@ Steps:
    1. [For 18+ slots](https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.18available.user.js)
    2. [For 18+ covaxin slots](https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.covaxin18available.user.js)
    3. [For 45+ slots](https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.45available.user.js)
+   4. [For 45+ covaxin slots](https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.covaxin45available.user.js)
 3. Reload Co-win site, select state and city of your choice and press search button.
 4. Now it will play audio whenever slot is found and keep searching every 5 seconds.
 
