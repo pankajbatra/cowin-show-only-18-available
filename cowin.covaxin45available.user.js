@@ -18,7 +18,7 @@ var $ = jQuery;
 $(document).ready(function() {
     if (window.location.href == "https://selfregistration.cowin.gov.in/") {
       console.log("Not logged in");
-      setTimeout(function() { $(".login-btn").click(); mCoinSound.play();}, 5000);
+      //setTimeout(function() { $(".login-btn").click(); mCoinSound.play();}, 5000);
       var mCoinSound = new Audio("https://soundbible.com/grab.php?id=2206&type=mp3");
       mCoinSound.loop = true;
       // mCoinSound.muted = true;
