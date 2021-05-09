@@ -12,23 +12,10 @@
 // ==/UserScript==
 
 'use strict';
-// Probably could remove this, but it makes the element mutation finder code easier.
 var $ = jQuery;
-
-$(document).ready(function() {
-    if (window.location.href == "https://selfregistration.cowin.gov.in/") {
-      console.log("Not logged in");
-      //setTimeout(function() { $(".login-btn").click(); mCoinSound.play();}, 5000);
-      var mCoinSound = new Audio("https://soundbible.com/grab.php?id=2206&type=mp3");
-      mCoinSound.loop = true;
-      // mCoinSound.muted = true;
-    }
-  });
 
 (function() {
     'use strict';
-    // Probably could remove this, but it makes the element mutation finder code easier.
-    //var $ = jQuery;
     var mCoinSound = new Audio("https://soundbible.com/grab.php?id=2206&type=mp3");
 
     function onElementInserted(containerSelector, elementSelector, callback) {
@@ -52,20 +39,64 @@ $(document).ready(function() {
 
     }
 
+     $(window).bind('beforeunload', function(){
+        console.log("beforeunload");
+        $('audio').each(function(){
+            this.pause(); // Stop playing
+            this.currentTime = 0; // Reset time
+        });
+    });
+
+    onElementInserted('body', 'form.login-block', function(element) {
+        console.log("Not logged in: on login page");
+        mCoinSound.play();
+    });
+
+    onElementInserted('body', '.beneficiary-box', function(element) {
+        console.log("Logged in: on beneficiary page");
+        $('audio').each(function(){
+            this.pause(); // Stop playing
+            this.currentTime = 0; // Reset time
+        });
+    });
+    
     onElementInserted('body', '.center-box', function(element) {
         console.log("center Box");
         setInterval(function() {
             mCoinSound.pause();
             mCoinSound.currentTime = 0;
-            $(".pin-search-btn").click(); }, 5*1000);
+            $(".pin-search-btn").click(); }, 3*1000);
+        setInterval(function() {
+            $.ajax({
+                url: 'https://cdn-api.co-vin.in/api/v2/appointment/beneficiaries',
+                type: 'GET',
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('Authorization', 'Bearer '+sessionStorage.getItem("userToken").replaceAll('"', ''));
+                },
+                "headers": {
+                    "accept": "application/json, text/plain, */*",
+                    "accept-language": "en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7,hi-IN;q=0.6,hi;q=0.5"
+                },
+                dataType: 'json',
+                timeout: 500,
+                data: {},
+               success: function (data,status,xhr) {
+                    console.log("still logged in...");
+                },
+                error: function (jqXhr, textStatus, errorMessage) { // error callback
+                    console.log("logged out ..., sending to login page");
+                    mCoinSound.play();
+                    window.location.href = "https://selfregistration.cowin.gov.in/";
+                }
+            });
+           }, 60*1000);
     });
 
     onElementInserted('body', '.mat-list-text', function(element) {
         var slotFound = false;
         var is18Plus = false;
          $(element).find( "a[href$='/appointment']" ).each(function(i, linkObj) {
-             var ageElem = $(linkObj).siblings('div.ng-star-inserted')[0]
-             //.children('span.age-limit')
+             var ageElem = $(linkObj).siblings('div.ng-star-inserted')[0];
              if (ageElem && ageElem.innerText != "Age 45+") {
                  if(linkObj.closest('div.row')) {
                      linkObj.closest('div.row').style.display = "none";
