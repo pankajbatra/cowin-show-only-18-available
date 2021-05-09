@@ -42,7 +42,7 @@
         setInterval(function() {
             mCoinSound.pause();
             mCoinSound.currentTime = 0;
-            $(".pin-search-btn").click(); }, 5*1000);
+            $(".pin-search-btn").click(); }, 15*1000);
     });
 
     onElementInserted('body', '.mat-list-text', function(element) {
