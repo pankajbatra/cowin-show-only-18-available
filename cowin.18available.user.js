@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CoWin: Only show 18+ and bookable center records
 // @namespace    Improved on the version by jacobsingh
-// @version      0.2
+// @version      0.3
 // @description  Only show 18+ and bookable records
 // @author       Pankaj Batra (github.com/pankajbatra)
 // @match        https://www.cowin.gov.in/*
