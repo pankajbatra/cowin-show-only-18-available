@@ -20,7 +20,7 @@ Steps:
 > **Note: 
 > 1. Cowin site keeps logging out every 15 minutes, please go back to beneficiaries page and relogin if required and follow step 3 above.
 > 2. Please don't press search button again and again, tool automatically does that for you every 3 seconds 
-> 3. In case of any issue just refresh the page by pressing refresh button on chrome url bar and you should see tampermonkey icon on top right with 1 written on top of a red color icon**
+> 3. In case of any issue just refresh the page by pressing refresh button on chrome url bar and you should see tampermonkey icon on top right with 1 written on top of a red color icon **
 
 [Video recording and instructions](https://www.loom.com/share/0a34939fd51e4b758f0e0a03f8b47ed9)
 
