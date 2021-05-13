@@ -7,15 +7,17 @@ Insipred by @jacobSingh [work](https://github.com/jacobSingh/cowin-18plus-usersc
 
 It checks for the slot every 3 seconds and plays audio in case a slot is found. It also checks if the user is still logged in, if not, it redirects to the login page and plays audio so that the user can re-login and restart the process.
 
-Steps:
+Steps (you may also check video link at bottom for steps):
 1. Install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en) for chrome. 
-2. Download and install the script (please install anyone, installing more than one won't work)
+2. Download and install the script (please install only one of below, installing more than one won't work). 
    1. [For 18+ slots](https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.18available.user.js)
    2. [For 18+ covaxin slots](https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.covaxin18available.user.js)
    3. [For 45+ slots](https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.45available.user.js)
    4. [For 45+ covaxin slots](https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.covaxin45available.user.js)
 3. Reload Co-win site, select the state and city of your choice and press the search button.
 4. Now it will play audio whenever a slot is found and keep searching every 5 seconds.
+
+**How to update**: Click on same above link and tampermoney would show option to update script.
 
 > Note: 
 > 1. Cowin site keeps logging out every 15 minutes, please go back to the beneficiaries page and log in if required and follow step 3 above.
