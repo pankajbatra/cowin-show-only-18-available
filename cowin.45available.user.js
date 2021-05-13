@@ -1,11 +1,10 @@
 // ==UserScript==
 // @name         CoWin: Only show 45+ and bookable center records
 // @namespace    Improved on the version by jacobsingh
-// @version      0.3
+// @version      0.4
 // @description  Only show 45+ and bookable records
 // @author       Pankaj Batra (github.com/pankajbatra)
-// @match        https://www.cowin.gov.in/*
-// @match https://selfregistration.cowin.gov.in
+// @match        https://selfregistration.cowin.gov.in
 // @match        https://selfregistration.cowin.gov.in/appointment
 // @require      https://code.jquery.com/jquery-3.6.0.min.js
 // @grant        none
@@ -64,6 +63,13 @@ var $ = jQuery;
     
     onElementInserted('body', '.center-box', function(element) {
         console.log("center Box");
+         $( "form.ng-invalid" ).append("<h3 style='font-size: 14px;color: #fc2803;text-align: left;'>Note: Please don't press search button again and again. <br/> \
+                                       if nothing is showing in slots, it means there is no bookable slot available, Don\'t worry, have patience. <br/>\
+<div style ='font-size: 12px;color: #4248f5;text-align: left;margin-top: 10px;'>Enjoy the tool! <br/> Pankaj Batra <br/> \
+<a href='http://www.pankajbatra.com/' target='_blank'>Blog</a>&nbsp;|&nbsp;\
+<a href='http://twitter.com/pankajbatra' target='_blank'>Twitter</a>&nbsp;|&nbsp;\
+<a href='http://www.facebook.com/pankaj.batra' target='_blank'>Facebook</a>&nbsp;|&nbsp;\
+<a href='http://www.linkedin.com/in/batrapankaj' target='_blank'>LinkedIn</a></div></h3>" );
         setInterval(function() {
             mCoinSound.pause();
             mCoinSound.currentTime = 0;
@@ -86,9 +92,14 @@ var $ = jQuery;
                     console.log("still logged in...");
                 },
                 error: function (jqXhr, textStatus, errorMessage) { // error callback
-                    console.log("logged out ..., sending to login page");
-                    mCoinSound.play();
-                    window.location.href = "https://selfregistration.cowin.gov.in/";
+                     if(jqXhr.status==401){
+                        console.log("logged out ..., sending to login page");
+                        mCoinSound.play();
+                        window.location.href = "https://selfregistration.cowin.gov.in/";
+                    }
+                    else{
+                      console.log("There is some error: "+jqXhr.status+" : "+errorMessage + " "+textStatus);
+                    }
                 }
             });
            }, 60*1000);
@@ -106,7 +117,7 @@ var $ = jQuery;
                  }
                  // for the authenticated list which uses different HTML
                  linkObj.closest('div.mat-list-item-content').parentNode.style.display = "none";
-                 console.log(" No 45+ Slot in : "+$(element).find('h5.center-name-title')[0].innerText);
+                 //console.log(" No 45+ Slot in : "+$(element).find('h5.center-name-title')[0].innerText);
                  is18Plus = true;
                  return;
              }
@@ -115,7 +126,7 @@ var $ = jQuery;
              }
          });
         if(!slotFound && !is18Plus){
-            console.log(" No available Slot in : "+$(element).find('h5.center-name-title')[0].innerText);
+            //console.log(" No available Slot in : "+$(element).find('h5.center-name-title')[0].innerText);
             element.style.display = "none";
         }
         else if(!is18Plus){
