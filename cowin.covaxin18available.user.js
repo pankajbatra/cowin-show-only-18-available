@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name         CoWin: Only show covaxin - 18+ and bookable center records
 // @namespace    Improved on the version by jacobsingh
-// @version      0.4
+// @version      0.5
 // @description  Only show covaxin 18+ and bookable records
 // @author       Pankaj Batra (github.com/pankajbatra)
+// @downloadURL  https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.covaxin18available.user.js
+// @updateURL    https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.covaxin18available.user.js
 // @match        https://selfregistration.cowin.gov.in/appointment
 // @match        https://selfregistration.cowin.gov.in
 // @require      https://code.jquery.com/jquery-3.6.0.min.js
