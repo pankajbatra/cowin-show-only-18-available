@@ -8,6 +8,7 @@ Insipred by @jacobSingh [work](https://github.com/jacobSingh/cowin-18plus-usersc
 It checks for the slot every 3 seconds and plays audio in case a slot is found. It also checks if the user is still logged in, if not, it redirects to the login page and plays audio so that the user can re-login and restart the process.
 
 [Video recording and instructions](https://www.loom.com/share/0a34939fd51e4b758f0e0a03f8b47ed9)
+https://www.loom.com/share/0a34939fd51e4b758f0e0a03f8b47ed9
 
 Steps (you may also check video link at bottom for steps):
 1. Install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en) for chrome. 
