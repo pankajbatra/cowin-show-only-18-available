@@ -7,6 +7,8 @@ Insipred by @jacobSingh [work](https://github.com/jacobSingh/cowin-18plus-usersc
 
 It checks for the slot every 3 seconds and plays audio in case a slot is found. It also checks if the user is still logged in, if not, it redirects to the login page and plays audio so that the user can re-login and restart the process.
 
+[Video recording and instructions](https://www.loom.com/share/0a34939fd51e4b758f0e0a03f8b47ed9)
+
 Steps (you may also check video link at bottom for steps):
 1. Install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en) for chrome. 
 2. Download and install the script (please install only one of below, installing more than one won't work). 
@@ -23,8 +25,6 @@ Steps (you may also check video link at bottom for steps):
 > 1. Cowin site keeps logging out every 15 minutes, please go back to the beneficiaries page and log in if required and follow step 3 above.
 > 2. Please don't press the search button, again and again, the tool automatically does that for you every 3 seconds
 > 3. In case of any issue just refresh the page by pressing the refresh button on the chrome URL bar and you should see tampermonkey icon on the top right with 1 written on top of a red colour icon
-
-[Video recording and instructions](https://www.loom.com/share/0a34939fd51e4b758f0e0a03f8b47ed9)
 
 https://www.loom.com/share/0a34939fd51e4b758f0e0a03f8b47ed9
 
