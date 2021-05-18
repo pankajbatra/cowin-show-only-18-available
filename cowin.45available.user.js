@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CoWin: Only show 45+ and bookable center records
 // @namespace    Improved on the version by jacobsingh
-// @version      0.5
+// @version      0.6
 // @description  Only show 45+ and bookable records
 // @author       Pankaj Batra (github.com/pankajbatra)
 // @downloadURL  https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.45available.user.js
@@ -109,29 +109,20 @@ var $ = jQuery;
 
     onElementInserted('body', '.mat-list-text', function(element) {
         var slotFound = false;
-        var is18Plus = false;
          $(element).find( "a[href$='/appointment']" ).each(function(i, linkObj) {
              var ageElem = $(linkObj).siblings('div.ng-star-inserted')[0]
              //.children('span.age-limit')
-             if (ageElem && ageElem.innerText != "Age 45+") {
-                 if(linkObj.closest('div.row')) {
-                     linkObj.closest('div.row').style.display = "none";
+             if (ageElem && ageElem.innerText == "Age 45+") {
+                 if (!linkObj.innerText.includes("NA") && !linkObj.innerText.includes("Booked")) {
+                     slotFound = true;
                  }
-                 // for the authenticated list which uses different HTML
-                 linkObj.closest('div.mat-list-item-content').parentNode.style.display = "none";
-                 //console.log(" No 45+ Slot in : "+$(element).find('h5.center-name-title')[0].innerText);
-                 is18Plus = true;
-                 return;
-             }
-             if (!linkObj.innerText.includes("NA") && !linkObj.innerText.includes("Booked")) {
-                 slotFound = true;
              }
          });
-        if(!slotFound && !is18Plus){
+        if(!slotFound){
             //console.log(" No available Slot in : "+$(element).find('h5.center-name-title')[0].innerText);
             element.style.display = "none";
         }
-        else if(!is18Plus){
+        else{
             console.log("Slot found in : "+$(element).find('h5.center-name-title')[0].innerText);
             mCoinSound.play();
         }
