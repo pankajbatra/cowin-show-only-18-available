@@ -29,6 +29,7 @@ Steps (you may also check video link at bottom for steps):
 > 4. In case you are getting errors after sometime like as shown below, please connect using a proxy (like surfshark) and keep switching between no-proxy and different proxies. Have added a video below to show how it works with Surfshark
 
 ![Error screenshot](https://i.ibb.co/W0FvYL1/Screenshot-2021-05-27-at-12-09-27-PM.png)
+
 [Surfshark Proxy usage video](https://drive.google.com/file/d/1FVzRjJio67j-H3V1Uuqlk7oz9FvcfGW8/view?usp=sharing)
 
 [How to check whether page is being refreshed every 5 seconds or not](https://www.loom.com/share/c46722780d7843f69a70994b734d9b44)
