@@ -26,7 +26,7 @@ Steps (you may also check video link at bottom for steps):
 > 1. Cowin site keeps logging out every 15 minutes, please go back to the beneficiaries page and log in if required and follow step 3 above.
 > 2. Please don't press the search button, again and again, the tool automatically does that for you every 3 seconds
 > 3. In case of any issue just refresh the page by pressing the refresh button on the chrome URL bar and you should see tampermonkey icon on the top right with 1 written on top of a red colour icon
-> 4. In case you are getting errors after sometime like as shown below, please connect using a proxy (like surfshark) and keep switching between no-proxy and different proxies. Have added a video below to show how it works with Surfshark
+> 4. In case you are getting errors after sometime like as shown below, please connect using a Indian proxy server (e.g. on surfshark) and keep switching between no-proxy and different proxies (Mumbai/Indore etc). Have added a video below to show how it works with Surfshark
 
 ![Error screenshot](https://i.ibb.co/W0FvYL1/Screenshot-2021-05-27-at-12-09-27-PM.png)
 
