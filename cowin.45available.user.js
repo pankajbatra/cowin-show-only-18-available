@@ -75,7 +75,7 @@ var $ = jQuery;
         setInterval(function() {
             mCoinSound.pause();
             mCoinSound.currentTime = 0;
-            $(".pin-search-btn").click(); }, 10*1000);
+            $(".pin-search-btn").click(); }, 30*1000);
         setInterval(function() {
             $.ajax({
                 url: 'https://cdn-api.co-vin.in/api/v2/appointment/beneficiaries',
