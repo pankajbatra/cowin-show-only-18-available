@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CoWin: Only show 45+ and bookable center records
 // @namespace    Improved on the version by jacobsingh
-// @version      0.6
+// @version      0.7
 // @description  Only show 45+ and bookable records
 // @author       Pankaj Batra (github.com/pankajbatra)
 // @downloadURL  https://github.com/pankajbatra/cowin-show-only-18-available/raw/main/cowin.45available.user.js
@@ -75,7 +75,7 @@ var $ = jQuery;
         setInterval(function() {
             mCoinSound.pause();
             mCoinSound.currentTime = 0;
-            $(".pin-search-btn").click(); }, 3*1000);
+            $(".pin-search-btn").click(); }, 10*1000);
         setInterval(function() {
             $.ajax({
                 url: 'https://cdn-api.co-vin.in/api/v2/appointment/beneficiaries',
